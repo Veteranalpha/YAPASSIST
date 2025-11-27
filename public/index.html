@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>X Link Extractor</title>
+  </head>
+  <body>
+    <h1>Paste WhatsApp messages below:</h1>
+   <form id="extract-form">
+  <textarea id="text-input" rows="10" cols="50"></textarea>
+</form>
+
+<!-- button outside but linked to the form -->
+<button type="submit" form="extract-form">Extract Links</button>
+    <h2>Extracted Links:</h2>
+    <pre id="output"></pre>
+    <script src="app.js"></script>
+  </body>
+</html>
