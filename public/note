@@ -1,5 +1,0 @@
-<form id="extract-form">
-  <textarea id="text-input" rows="10" cols="50"></textarea>
-</form>
-
-<button id="extract-btn">Extract Links</button>
