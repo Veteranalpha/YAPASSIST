@@ -15,7 +15,7 @@ let linkCommentPairs = [];
 
 // Extract links (basic http/https)
 const extractLinks = (text) => {
-  const regex = /(https?:\/\/[^\s]+)/g;
+  const regex = /(https?:\/\/)?(x\.com\/[^\s]+)/g;
   const matches = text.match(regex);
   return matches || [];
 };
@@ -42,7 +42,8 @@ const displayLinks = () => {
       const tweetId = tweetIdMatch[1];
 
       // Open X intent in new tab
-      window.open(`
+      window.open(
+        `
         https://twitter.com/intent/tweet?in_reply_to=${tweetId}&text=${pair.comment}`,
         "_blank"
       );
