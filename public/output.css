@@ -54,6 +54,9 @@
 .justify-center {
   justify-content: center;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 .border {
   border-style: var(--tw-border-style);
   border-width: 1px;

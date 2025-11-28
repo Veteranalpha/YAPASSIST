@@ -6,6 +6,19 @@ const assignBtn = document.getElementById("assign-comments");
 const linkList = document.getElementById("link-list");
 const currentComment = document.getElementById("current-comment");
 
+function parseNumberedComments(commentsText) {
+  const matches = [...commentsText.matchAll(/\d+\.\s*([\s\S]*?)(?=\n\s*\d+\.|\n*$)/g)];
+
+  if (matches.length > 0) {
+    return matches.map(m => m[1].trim()).filter(Boolean);
+  }
+
+  return commentsText
+    .split(/\n+/)
+    .map(line => line.replace(/^\s*\d+\.\s*/, "").trim())
+    .filter(Boolean);
+}
+
 // ====== DATA STORAGE ======
 let extractedLinks = [];
 let numberedComments = [];
@@ -82,13 +95,14 @@ extractBtn.addEventListener("click", () => {
 // Assign comments to extracted links
 assignBtn.addEventListener("click", () => {
   const commentText = commentsInput.value.trim();
+
   if (!extractedLinks.length) return alert("No links to assign comments to!");
   if (!commentText) return alert("No comments provided!");
 
-  // Split comments by lines or numbers (1. 2. 3.)
-  numberedComments = commentText.split(/\n\d*\.?\s*/).filter(Boolean);
+  // Parse properly numbered comments
+  numberedComments = parseNumberedComments(commentText);
 
-  // Pair links with comments
+  // Pair comments with links
   linkCommentPairs = extractedLinks.map((link, i) => ({
     link,
     comment: numberedComments[i] || "",
