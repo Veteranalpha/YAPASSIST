@@ -38,56 +38,70 @@
     <div
       class="w-full max-w-md sm:max-w-4xl bg-green-50 p-4 sm:p-6 rounded-lg shadow-md z-40"
     >
-      <h1
+    <div class="inline-flex items-center">
+      
+  <h1
         class="text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-green-900 text-center"
       >
-        Yap Assist Pro
+        𝖸𝖠𝖯𝖠𝖲𝖲𝖨𝖲𝖳 𝖯𝖱𝖮
       </h1>
+    </div>
+    
 
       <!-- Links textarea -->
-      <div class="mb-4">
-        <label class="block font-semibold mb-1 text-green-800"
-          >Paste X Links:</label
-        >
-        <textarea
-          id="links-input"
-          rows="5"
-          class="w-full p-2 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
-        ></textarea>
-        <button
-          id="extract-links"
-          class="mt-2 w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-        >
-          Extract Links
-        </button>
-      </div>
+      <!-- Links textarea -->
+<div class="mb-4">
+  <label class="block font-semibold mb-1 text-green-800">Paste X Links:</label>
+  <textarea
+    id="links-input"
+    rows="5"
+    class="w-full p-2 border border-green-300 rounded focus:ring-2 focus:ring-green-400"
+  ></textarea>
+  <button
+    id="extract-links"
+    class="mt-2 w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+  >
+    Extract Links
+  </button>
+</div>
 
-      <!-- Comments textarea -->
-      <div class="mb-4">
-        <label class="block font-semibold mb-1 text-green-800"
-          >Paste Bullish comment</label
-        >
-        <textarea
-          id="comments-input"
-          rows="6"
-          class="w-full p-2 border border-green-300 rounded focus:ring-2 focus:ring-green-400" placeholder="Type this into your chatAI"
-        >"Generate 50 clean, natural, bullish comments about project growth, execution, progress, momentum, roadmap, and long-term potential. No hashtags. No emojis. Each comment should be numbered 1 to 50"</textarea>
-        <button
-          id="assign-comments"
-          class="mt-2 w-full px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
-        >
-          Assign Comments
-        </button>
-      </div>
+<!-- Removed comments textarea completely -->
+
+<!-- Generate Comment Button -->
+<div class="mb-4">
+  <button
+    id="generate-comment"
+    class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
+  >
+    Generate Comment
+  </button>
+</div>
+
+<!-- Links list -->
+<h2 class="text-lg sm:text-xl font-semibold mb-2 text-green-900">
+  Clickable Links:
+</h2>
+<ul id="link-list" class="space-y-2 w-full max-w-md overflow-hidden"></ul>
+
+<!-- Current comment preview -->
+<div class="mt-4">
+  <label class="block font-semibold mb-1 text-green-800">Current Comment:</label>
+  <textarea
+    id="current-comment"
+    rows="3"
+    class="w-full p-2 border border-green-200 rounded bg-green-50 text-green-900"
+    readonly
+  ></textarea>
+</div>
 
       <!-- Links list -->
-      <h2 class="text-lg sm:text-xl font-semibold mb-2 text-green-900">
+      <!-- <h2 class="text-lg sm:text-xl font-semibold mb-2 text-green-900">
         Clickable Links:
       </h2>
-      <ul id="link-list" class="space-y-2 w-full max-w-md overflow-hidden"></ul>
+      <ul id="link-list" class="space-y-2 w-full max-w-md overflow-hidden"></ul> -->
 
       <!-- Current comment preview -->
-      <div class="mt-4">
+      <!-- <div class="mt-4">
         <label class="block font-semibold mb-1 text-green-800"
           >Current Comment:</label
         >
@@ -97,7 +111,7 @@
           class="w-full p-2 border border-green-200 rounded bg-green-50 text-green-900"
           readonly
         ></textarea>
-      </div>
+      </div> -->
     </div>
     <!-- Welcome modal (hidden by default) -->
 
